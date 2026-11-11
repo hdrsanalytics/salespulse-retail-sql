@@ -131,7 +131,7 @@ The `order_summary` view contains one row per order, preventing duplicate-inflat
 
 ## Demo video
 
-[Watch the SalesPulse walkthrough](PASTE_YOUR_LOOM_LINK_HERE)
+[Watch the SalesPulse walkthrough](https://www.loom.com/share/0c0e7e404d334d7eaa9b075ecc3efc31)
 
 ## Repository
 
