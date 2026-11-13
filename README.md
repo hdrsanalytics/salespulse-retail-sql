@@ -62,6 +62,17 @@ The project contains 27 documented business questions covering:
 
 The project includes more than eight CTE queries and more than six window-function queries.
 
+## Metric definitions
+
+- Revenue is the sum of `item_revenue` from `fact_sales`.
+- Revenue represents item prices only and excludes freight charges.
+- The order count is the number of distinct `order_id` values in `fact_sales`: 99,441 orders.
+- Average order value is calculated as revenue divided by the order count: 136.68.
+- Customer count is the number of distinct `customer_unique_id` values: 96,096 customers.
+- Revenue includes all order statuses, including delivered, canceled, and unavailable orders.
+- Delivery metrics use the one-row-per-order `order_summary` view and include delivered orders with non-null delivery dates.
+- Monthly trend analysis uses January 2017 through August 2018 to exclude incomplete months.
+
 ## Key findings
 
 1. Total revenue was **13,591,643.70** across **99,441 orders**.
