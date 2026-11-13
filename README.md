@@ -73,6 +73,17 @@ The project includes more than eight CTE queries and more than six window-functi
 - Delivery metrics use the one-row-per-order `order_summary` view and include delivered orders with non-null delivery dates.
 - Monthly trend analysis uses January 2017 through August 2018 to exclude incomplete months.
 
+## SQL run order
+
+The analysis uses DuckDB. Run the SQL files in this order:
+
+1. `00_create_views.sql` — creates the `fact_sales` and `order_summary` views.
+2. `salespulse_queries.sql` — runs the 27 business-analysis queries.
+3. `02_validation.sql` — checks row counts, duplicate orders, and revenue totals.
+4. `03_complete_period_trends.sql` — runs the corrected monthly trend analysis for January 2017 through August 2018.
+
+The views must be created before running the analysis queries.
+
 ## Key findings
 
 1. Total revenue was **13,591,643.70** across **99,441 orders**.
